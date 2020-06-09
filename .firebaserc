@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "formulario-179af": {
+      "hosting": {
+        "app": [
+          "formulario-179af"
+        ]
+      }
+    }
+  }
+}

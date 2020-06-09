@@ -1,0 +1,29 @@
+<ion-header mode="ios">
+  <ion-toolbar  color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+        <ion-item *ngIf="item">
+          <ion-input required type="text" placeholder="Task" [(ngModel)]="item.task"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="item">
+          <ion-input required type="number" placeholder="Priority" [(ngModel)]="item.priority"></ion-input>
+        </ion-item>
+      </ion-list>
+        
+        <ion-button color="warning" (click)="onClickSave()" expand="full" shape="round">
+          Save me
+        </ion-button>
+        
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button routerLink="/" color="danger" routerDirection="forward" (click)="onRemove(itemId)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>
